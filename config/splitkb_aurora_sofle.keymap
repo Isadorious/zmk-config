@@ -21,8 +21,8 @@
     behaviors {
         symone: symbolOne {
             compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp LBKT>, <&kp N1>
-            mods = <(MOD_LSFT|MOD_RSFT)>
+            bindings = <&kp LBKT>, <&kp N1>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
     keymap {
