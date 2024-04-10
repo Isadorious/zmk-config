@@ -21,6 +21,7 @@
     behaviors {
         symone: symbolOne {
             compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
             bindings = <&kp LBKT>, <&kp N1>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
