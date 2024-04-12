@@ -36,7 +36,7 @@
         leftBraceThree: leftBraceThree {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells= <0>;
-            bindings = <&kp LBRACE>, <&kp N3>;
+            bindings = <&kp LBRC>, <&kp N3>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         }; 
@@ -71,7 +71,7 @@
         rightBraceEight: rightBraceEight {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells= <0>;
-            bindings = <&kp RBRACE>, <&kp N8>;
+            bindings = <&kp RBRC>, <&kp N8>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_RSFT)>;
         };
