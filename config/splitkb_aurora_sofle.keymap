@@ -19,11 +19,75 @@
 
 / {
     behaviors {
-        symone: symbolOne {
+        plusOne: plusOne {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells= <0>;
-            bindings = <&kp LBKT>, <&kp N1>;
+            bindings = <&kp PLUS>, <&kp N1>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        leftBracketTwo: leftBracketTwo {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp LBKT>, <&kp N2>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        leftBraceThree: leftBraceThree {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp LBRACE>, <&kp N3>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        }; 
+        leftParenFour: leftParenFour {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp LPAR>, <&kp N4>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        ampFive: ampFive {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp AMPS>, <&kp N5>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        equalSix: equalSix {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp EQUAL>, <&kp N6>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        rightParenSeven: rightParenSeven {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp RPAR>, <&kp N7>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        rightBraceEight: rightBraceEight {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp RBRACE>, <&kp N8>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        rightBracketNine: rightBracketNine {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp RBKT>, <&kp N9>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        asteriskZero: asteriskZero {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells= <0>;
+            bindings = <&kp STAR>, <&kp N0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
     };
     keymap {
@@ -31,13 +95,13 @@
 
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
+// |  ESC  |  +  |  [  |  {   |  (   |  &   |                   |  =   |  )    |  }    |  ]   |   *   |   `   |
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
 // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               |CTRL | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   | RALT |
             bindings = <
-&kp ESC   &symone &kp N2    &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9   &kp N0   &kp GRAVE
+&kp ESC   &plusOne &leftBracketTwo    &leftBraceThree   &leftParenFour   &ampFive                    &equalSix &rightParenSeven   &rightBraceEight    &rightBracketNine   &asteriskZero   &kp GRAVE
 &kp TAB   &kp Q  &kp W     &kp E    &kp R    &kp T                      &kp Y  &kp U    &kp I     &kp O    &kp P    &kp MINUS
 &kp LCTRL &kp A  &kp S     &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L    &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X     &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
